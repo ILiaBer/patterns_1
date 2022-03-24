@@ -1,4 +1,7 @@
+package test;
+
 import com.codeborne.selenide.logevents.SelenideLogger;
+import generator.Data;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -10,9 +13,6 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class TestPatterns{
-
-    @Test()
-    void asdr(){
 
         @BeforeAll
         static void setUpAll() {

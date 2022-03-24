@@ -1,3 +1,5 @@
+package generator;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import com.github.javafaker.Faker;
