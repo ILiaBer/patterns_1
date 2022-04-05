@@ -38,12 +38,16 @@ public class Data {
         String name = faker.name().fullName();
         return name;
     }
-
-    public static String generatePhone(String locale) {
-        Faker faker = new Faker(new Locale("ru"));
-        String phone = faker.phoneNumber().phoneNumber();
-        return phone;
+    public static String generatePhone(){
+        Faker faker = new Faker();
+        return "+7" + faker.number().digits(10);
     }
+
+//    public static String generatePhone(String locale) {
+//        Faker faker = new Faker(new Locale("ru"));
+//        String phone = faker.number().digits(10);
+//        return phone;
+//    }
 
     public static class Registration {
         private Registration() {
@@ -53,8 +57,8 @@ public class Data {
         public static UserInfo generateUser() {
             Faker faker = new Faker(new Locale("ru"));
             return new UserInfo(getRandomCity(),
-                    faker.name().fullName(),
-                    faker.phoneNumber().phoneNumber());
+                    getName(),
+                  generatePhone());
         }
     }
 
